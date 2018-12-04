@@ -1,0 +1,144 @@
+Namespace(activation='relu', arch='resnet18', cuda='3', optimizer='Rprop', root='D:/qpsk_awgn_sps8_esno10.dat')
+ResNet(
+  (conv1): Conv1d(2, 64, kernel_size=(7,), stride=(2,), padding=(3,), bias=False)
+  (bn1): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (relu): ReLU(inplace)
+  (maxpool): MaxPool1d(kernel_size=3, stride=2, padding=1, dilation=1, ceil_mode=False)
+  (layer1): Sequential(
+    (0): BasicBlock(
+      (conv1): Conv1d(64, 64, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+      (bn1): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv2): Conv1d(64, 64, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+      (bn2): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (1): BasicBlock(
+      (conv1): Conv1d(64, 64, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+      (bn1): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv2): Conv1d(64, 64, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+      (bn2): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (layer2): Sequential(
+    (0): BasicBlock(
+      (conv1): Conv1d(64, 128, kernel_size=(3,), stride=(2,), padding=(1,), bias=False)
+      (bn1): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv2): Conv1d(128, 128, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+      (bn2): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential(
+        (0): Conv1d(64, 128, kernel_size=(1,), stride=(2,), bias=False)
+        (1): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): BasicBlock(
+      (conv1): Conv1d(128, 128, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+      (bn1): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv2): Conv1d(128, 128, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+      (bn2): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (layer3): Sequential(
+    (0): BasicBlock(
+      (conv1): Conv1d(128, 256, kernel_size=(3,), stride=(2,), padding=(1,), bias=False)
+      (bn1): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv2): Conv1d(256, 256, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+      (bn2): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential(
+        (0): Conv1d(128, 256, kernel_size=(1,), stride=(2,), bias=False)
+        (1): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): BasicBlock(
+      (conv1): Conv1d(256, 256, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+      (bn1): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv2): Conv1d(256, 256, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+      (bn2): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (layer4): Sequential(
+    (0): BasicBlock(
+      (conv1): Conv1d(256, 512, kernel_size=(3,), stride=(2,), padding=(1,), bias=False)
+      (bn1): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv2): Conv1d(512, 512, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+      (bn2): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential(
+        (0): Conv1d(256, 512, kernel_size=(1,), stride=(2,), bias=False)
+        (1): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): BasicBlock(
+      (conv1): Conv1d(512, 512, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+      (bn1): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv2): Conv1d(512, 512, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+      (bn2): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (avgpool): AdaptiveAvgPool1d(output_size=1)
+  (fc): Linear(in_features=512, out_features=2, bias=True)
+)
+loading data
+  epoch    accuracy    train_loss    valid_loss    cp       dur
+-------  ----------  ------------  ------------  ----  --------
+      1      0.8187        0.4226        0.3999     +  874.4213
+      2      0.8203        0.3903        0.3963     +  878.7705
+      3      0.8220        0.3869        0.3934     +  883.4310
+      4      0.8238        0.3839        0.3906     +  884.9731
+      5      0.8250        0.3811        0.3882     +  871.8554
+      6      0.8260        0.3787        0.3862     +  867.3130
+      7      0.8283        0.3762        0.3834     +  869.9419
+      8      0.8294        0.3736        0.3811     +  887.7112
+      9      0.8298        0.3716        0.3793     +  887.2829
+     10      0.8319        0.3689        0.3768     +  888.0554
+     11      0.8334        0.3670        0.3747     +  887.5411
+     12      0.8342        0.3648        0.3726     +  888.3196
+     13      0.8348        0.3630        0.3709     +  887.7412
+     14      0.8358        0.3606        0.3689     +  888.9991
+     15      0.8365        0.3587        0.3672     +  887.3019
+     16      0.8381        0.3566        0.3649     +  909.6332
+     17      0.8389        0.3547        0.3630     +  888.3026
+     18      0.8397        0.3529        0.3613     +  889.1322
+     19      0.8405        0.3514        0.3595     +  887.4730
+     20      0.8410        0.3494        0.3578     +  888.4928
+     21      0.8418        0.3475        0.3562     +  887.5080
+     22      0.8426        0.3457        0.3545     +  887.9193
+     23      0.8436        0.3438        0.3528     +  887.8243
+     24      0.8441        0.3425        0.3513     +  887.9233
+     25      0.8456        0.3406        0.3498     +  888.1475
+     26      0.8462        0.3393        0.3483     +  888.1675
+     27      0.8469        0.3375        0.3471     +  888.0735
+     28      0.8470        0.3360        0.3455     +  887.3449
+     29      0.8476        0.3348        0.3440     +  887.3679
+     30      0.8485        0.3331        0.3428     +  887.8433
+     31      0.8488        0.3320        0.3420     +  887.1297
+     32      0.8503        0.3299        0.3401     +  888.3196
+     33      0.8509        0.3290        0.3388     +  887.8913
+     34      0.8517        0.3277        0.3378     +  887.2498
+     35      0.8526        0.3262        0.3364     +  887.3699
+     36      0.8527        0.3248        0.3353     +  887.0017
+     37      0.8537        0.3233        0.3342     +  889.2393
+     38      0.8544        0.3223        0.3330     +  887.2348
+     39      0.8550        0.3213        0.3319     +  887.2648
+     40      0.8550        0.3203        0.3313     +  886.0980
+     41      0.8556        0.3189        0.3300     +  886.3452
+     42      0.8564        0.3173        0.3289     +  887.1698
+     43      0.8567        0.3168        0.3279     +  886.4232
+     44      0.8571        0.3154        0.3269     +  887.5381
+     45      0.8576        0.3146        0.3260     +  887.1067
+     46      0.8583        0.3131        0.3250     +  886.5993
+     47      0.8581        0.3118        0.3243     +  888.8550
+     48      0.8588        0.3112        0.3234     +  887.4390
+     49      0.8593        0.3101        0.3225     +  888.0764
+     50      0.8593        0.3090        0.3221     +  886.9856
+     51      0.8600        0.3085        0.3208     +  887.7782
+     52      0.8602        0.3073        0.3200     +  887.7122
+     53      0.8607        0.3068        0.3194     +  886.8435
+     54      0.8611        0.3052        0.3185     +  887.4990
+     55      0.8610        0.3048        0.3177     +  887.3709
+     56      0.8617        0.3032        0.3170     +  888.1375
