@@ -1,0 +1,150 @@
+Namespace(activation='prelu', arch='resnet18', cuda='0', optimizer='Adam', root='D:/qpsk_awgn_sps8_esno20.dat')
+ResNet(
+  (prelu): PReLU(num_parameters=1)
+  (conv1): Conv1d(2, 64, kernel_size=(7,), stride=(2,), padding=(3,), bias=False)
+  (bn1): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (relu): ReLU(inplace)
+  (maxpool): MaxPool1d(kernel_size=3, stride=2, padding=1, dilation=1, ceil_mode=False)
+  (layer1): Sequential(
+    (0): BasicBlock(
+      (conv1): Conv1d(64, 64, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+      (bn1): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv2): Conv1d(64, 64, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+      (bn2): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (prelu1): PReLU(num_parameters=1)
+      (prelu2): PReLU(num_parameters=1)
+    )
+    (1): BasicBlock(
+      (conv1): Conv1d(64, 64, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+      (bn1): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv2): Conv1d(64, 64, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+      (bn2): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (prelu1): PReLU(num_parameters=1)
+      (prelu2): PReLU(num_parameters=1)
+    )
+  )
+  (layer2): Sequential(
+    (0): BasicBlock(
+      (conv1): Conv1d(64, 128, kernel_size=(3,), stride=(2,), padding=(1,), bias=False)
+      (bn1): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv2): Conv1d(128, 128, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+      (bn2): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential(
+        (0): Conv1d(64, 128, kernel_size=(1,), stride=(2,), bias=False)
+        (1): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (prelu1): PReLU(num_parameters=1)
+      (prelu2): PReLU(num_parameters=1)
+    )
+    (1): BasicBlock(
+      (conv1): Conv1d(128, 128, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+      (bn1): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv2): Conv1d(128, 128, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+      (bn2): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (prelu1): PReLU(num_parameters=1)
+      (prelu2): PReLU(num_parameters=1)
+    )
+  )
+  (layer3): Sequential(
+    (0): BasicBlock(
+      (conv1): Conv1d(128, 256, kernel_size=(3,), stride=(2,), padding=(1,), bias=False)
+      (bn1): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv2): Conv1d(256, 256, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+      (bn2): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential(
+        (0): Conv1d(128, 256, kernel_size=(1,), stride=(2,), bias=False)
+        (1): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (prelu1): PReLU(num_parameters=1)
+      (prelu2): PReLU(num_parameters=1)
+    )
+    (1): BasicBlock(
+      (conv1): Conv1d(256, 256, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+      (bn1): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv2): Conv1d(256, 256, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+      (bn2): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (prelu1): PReLU(num_parameters=1)
+      (prelu2): PReLU(num_parameters=1)
+    )
+  )
+  (layer4): Sequential(
+    (0): BasicBlock(
+      (conv1): Conv1d(256, 512, kernel_size=(3,), stride=(2,), padding=(1,), bias=False)
+      (bn1): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv2): Conv1d(512, 512, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+      (bn2): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential(
+        (0): Conv1d(256, 512, kernel_size=(1,), stride=(2,), bias=False)
+        (1): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (prelu1): PReLU(num_parameters=1)
+      (prelu2): PReLU(num_parameters=1)
+    )
+    (1): BasicBlock(
+      (conv1): Conv1d(512, 512, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+      (bn1): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv2): Conv1d(512, 512, kernel_size=(3,), stride=(1,), padding=(1,), bias=False)
+      (bn2): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (prelu1): PReLU(num_parameters=1)
+      (prelu2): PReLU(num_parameters=1)
+    )
+  )
+  (avgpool): AdaptiveAvgPool1d(output_size=1)
+  (fc): Linear(in_features=512, out_features=2, bias=True)
+)
+loading data
+  epoch    accuracy    train_loss    valid_loss    cp       dur
+-------  ----------  ------------  ------------  ----  --------
+      1      0.9984        0.0364        0.0046     +  205.5131
+      2      0.9304        0.0056        0.2432        204.6784
+      3      0.9944        0.0035        0.0177        204.6274
+      4      0.8941        0.0038        0.4797        204.4073
+      5      0.9996        0.0035        0.0012     +  201.4340
+      6      0.9918        0.0028        0.0294        195.8148
+      7      0.9978        0.0023        0.0064        196.6585
+      8      0.9985        0.0027        0.0056        196.8766
+      9      0.8713        0.0024        0.4781        196.8466
+Re-initializing optimizer because the following parameters were re-set: lr.
+     10      0.9986        0.0023        0.0044        196.9627
+     11      0.9997        0.0005        0.0008     +  196.1291
+     12      0.9998        0.0003        0.0005     +  195.5096
+     13      0.9998        0.0003        0.0006        196.1371
+     14      0.9999        0.0003        0.0004     +  196.8336
+     15      0.9999        0.0003        0.0005        196.0870
+     16      0.9999        0.0001        0.0004     +  195.3165
+     17      0.9998        0.0002        0.0004     +  195.6737
+     18      0.9998        0.0002        0.0005        195.0933
+     19      0.9999        0.0001        0.0002     +  195.8849
+     20      0.9998        0.0001        0.0005        195.1704
+     21      0.9998        0.0002        0.0006        194.9892
+     22      0.9998        0.0002        0.0007        196.0470
+     23      0.9998        0.0002        0.0005        195.3905
+Re-initializing optimizer because the following parameters were re-set: lr.
+     24      0.9998        0.0001        0.0006        195.7468
+     25      0.9999        0.0001        0.0004        196.5594
+     26      0.9999        0.0000        0.0004        196.0720
+     27      0.9998        0.0000        0.0004        195.8289
+     28      0.9999        0.0000        0.0004        196.2071
+     29      0.9999        0.0000        0.0005        195.4526
+     30      0.9999        0.0000        0.0005        195.7478
+     31      0.9999        0.0000        0.0006        196.2171
+     32      0.9999        0.0000        0.0005        196.0440
+     33      0.9999        0.0000        0.0005        195.7668
+     34      0.9999        0.0000        0.0004        195.6837
+     35      0.9999        0.0000        0.0004        195.3185
+     36      0.9999        0.0000        0.0004        196.1941
+     37      0.9999        0.0000        0.0004        195.8859
+     38      0.9999        0.0000        0.0004        195.3845
+Stopping since valid_loss has not improved in the last 20 epochs.
+Best Model State Restored
+Best Confusion Matrix:
+ [[100   0]
+ [  0 100]]

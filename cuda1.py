@@ -40,24 +40,63 @@ import os
 #           '--root D:/qpsk_awgn_sps8_esno20.dat >> NAG_esno20.txt')
 
 
+# print(3)
+# os.system('python resnet_roll_off.py --cuda 1 --arch resnet18 --optimizer Adam --activation relu '
+#           '--root D:/qpsk_awgn_sps8_esno10.dat >> Adam_esno10.txt')
+#
+# os.system('python resnet_roll_off.py --cuda 1 --arch resnet18 --optimizer Adam --activation relu '
+#           '--root D:/qpsk_awgn_sps8_esno12.dat >> Adam_esno12.txt')
+#
+# os.system('python resnet_roll_off.py --cuda 1 --arch resnet18 --optimizer Adam --activation relu '
+#           '--root D:/qpsk_awgn_sps8_esno14.dat >> Adam_esno14.txt')
+#
+# os.system('python resnet_roll_off.py --cuda 1 --arch resnet18 --optimizer Adam --activation relu '
+#           '--root D:/qpsk_awgn_sps8_esno16.dat >> Adam_esno16.txt')
+#
+# os.system('python resnet_roll_off.py --cuda 1 --arch resnet18 --optimizer Adam --activation relu '
+#           '--root D:/qpsk_awgn_sps8_esno18.dat >> Adam_esno18.txt')
+#
+# os.system('python resnet_roll_off.py --cuda 1 --arch resnet18 --optimizer Adam --activation relu '
+#           '--root D:/qpsk_awgn_sps8_esno20.dat >> Adam_esno20.txt')
+
+
 print(3)
-os.system('python resnet_roll_off.py --cuda 1 --arch resnet18 --optimizer Adam --activation relu '
-          '--root D:/qpsk_awgn_sps8_esno10.dat >> Adam_esno10.txt')
+os.system('python resnet_roll_off.py --cuda 1 --arch resnet18 --optimizer Adamax --activation elu '
+          '--root D:/qpsk_awgn_sps8_esno10.dat >> adamax_elu_qpsk_esno10.txt')
 
-os.system('python resnet_roll_off.py --cuda 1 --arch resnet18 --optimizer Adam --activation relu '
-          '--root D:/qpsk_awgn_sps8_esno12.dat >> Adam_esno12.txt')
+os.system('python resnet_roll_off.py --cuda 1 --arch resnet18 --optimizer Adamax --activation elu '
+          '--root D:/qpsk_awgn_sps8_esno12.dat >> adamax_elu_qpsk_esno12.txt')
 
-os.system('python resnet_roll_off.py --cuda 1 --arch resnet18 --optimizer Adam --activation relu '
-          '--root D:/qpsk_awgn_sps8_esno14.dat >> Adam_esno14.txt')
+os.system('python resnet_roll_off.py --cuda 1 --arch resnet18 --optimizer Adamax --activation elu '
+          '--root D:/qpsk_awgn_sps8_esno14.dat >> adamax_elu_qpsk_esno14.txt')
 
-os.system('python resnet_roll_off.py --cuda 1 --arch resnet18 --optimizer Adam --activation relu '
-          '--root D:/qpsk_awgn_sps8_esno16.dat >> Adam_esno16.txt')
+os.system('python resnet_roll_off.py --cuda 1 --arch resnet18 --optimizer Adamax --activation elu '
+          '--root D:/qpsk_awgn_sps8_esno16.dat >> adamax_elu_qpsk_esno16.txt')
 
-os.system('python resnet_roll_off.py --cuda 1 --arch resnet18 --optimizer Adam --activation relu '
-          '--root D:/qpsk_awgn_sps8_esno18.dat >> Adam_esno18.txt')
+os.system('python resnet_roll_off.py --cuda 1 --arch resnet18 --optimizer Adamax --activation elu '
+          '--root D:/qpsk_awgn_sps8_esno18.dat >> adamax_elu_qpsk_esno18.txt')
 
-os.system('python resnet_roll_off.py --cuda 1 --arch resnet18 --optimizer Adam --activation relu '
-          '--root D:/qpsk_awgn_sps8_esno20.dat >> Adam_esno20.txt')
+os.system('python resnet_roll_off.py --cuda 1 --arch resnet18 --optimizer Adamax --activation elu '
+          '--root D:/qpsk_awgn_sps8_esno20.dat >> adamax_elu_qpsk_esno20.txt')
+
+print(4)
+os.system('python resnet_roll_off.py --cuda 1 --arch resnet18 --optimizer Adamax --activation prelu '
+          '--root D:/qpsk_awgn_sps8_esno10.dat >> adamax_prelu_qpsk_esno10.txt')
+
+os.system('python resnet_roll_off.py --cuda 1 --arch resnet18 --optimizer Adamax --activation prelu '
+          '--root D:/qpsk_awgn_sps8_esno12.dat >> adamax_prelu_qpsk_esno12.txt')
+
+os.system('python resnet_roll_off.py --cuda 1 --arch resnet18 --optimizer Adamax --activation prelu '
+          '--root D:/qpsk_awgn_sps8_esno14.dat >> adamax_prelu_qpsk_esno14.txt')
+
+os.system('python resnet_roll_off.py --cuda 1 --arch resnet18 --optimizer Adamax --activation prelu '
+          '--root D:/qpsk_awgn_sps8_esno16.dat >> adamax_prelu_qpsk_esno16.txt')
+
+os.system('python resnet_roll_off.py --cuda 1 --arch resnet18 --optimizer Adamax --activation prelu '
+          '--root D:/qpsk_awgn_sps8_esno18.dat >> adamax_prelu_qpsk_esno18.txt')
+
+os.system('python resnet_roll_off.py --cuda 1 --arch resnet18 --optimizer Adamax --activation prelu '
+          '--root D:/qpsk_awgn_sps8_esno20.dat >> adamax_prelu_qpsk_esno20.txt')
 
 
 
